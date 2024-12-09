@@ -1,0 +1,50 @@
+creating tables
+ 
+# User table
+
+CREATE TABLE "User" (
+    user_id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,          
+    username TEXT UNIQUE,   
+    password TEXT,      
+    gender TEXT
+);
+
+# Follower table
+
+CREATE TABLE "Follower" (
+    follower_id SERIAL PRIMARY KEY,
+    follower_user_id INTEGER NOT NULL REFERENCES "User"(user_id),
+    following_user_id INTEGER NOT NULL REFERENCES "User"(user_id)
+);
+
+
+# Tweet Table
+
+CREATE TABLE "Tweet" (
+    tweet_id SERIAL PRIMARY KEY,
+    tweet TEXT NOT NULL,
+    user_id INTEGER NOT NULL REFERENCES "User"(user_id),
+    date_time TIMESTAMP NOT NULL
+);
+
+
+
+# Reply Table
+
+CREATE TABLE "Reply" (
+    reply_id SERIAL PRIMARY KEY,
+	tweet_id INTEGER NOT NULL REFERENCES "Tweet"(tweet_id),
+    reply TEXT NOT NULL,
+    user_id INTEGER NOT NULL REFERENCES "User"(user_id),
+    date_time TIMESTAMP NOT NULL
+);
+
+# Like Table
+
+CREATE TABLE "Like" (
+    like_id SERIAL PRIMARY KEY,
+	tweet_id INTEGER NOT NULL REFERENCES "Tweet"(tweet_id),
+    user_id INTEGER NOT NULL REFERENCES "User"(user_id),
+    date_time TIMESTAMP NOT NULL
+);

@@ -1,0 +1,43 @@
+### Register
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+  "username": "Rohit",
+  "password": "Rohit@123",
+  "name": "Rohit",
+  "gender": "Male"
+}
+
+### Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "password": "richard_567"
+}
+
+### Following List of Nani
+GET http://localhost:5000/user/following/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im5hbmlwaW5uaW50aTIyIiwiaWF0IjoxNzMzNzY4Mjg1LCJleHAiOjE3MzM3NzE4ODV9.F15FdtKsWKDfvMvDQ7ElbKKYx1OXo9h5HrXzMtPUSrw
+
+
+### Followers List of Nani
+GET http://localhost:5000/user/followers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im5hbmlwaW5uaW50aTIyIiwiaWF0IjoxNzMzNzY4Mjg1LCJleHAiOjE3MzM3NzE4ODV9.F15FdtKsWKDfvMvDQ7ElbKKYx1OXo9h5HrXzMtPUSrw
+
+
+
+### Follow 
+POST http://localhost:5000/follow/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImF5dXNoIiwiaWF0IjoxNzMzNzY2NTY3LCJleHAiOjE3MzM3NzAxNjd9.Zm3YdAU8CPXB0h_U_e9NVAsv3YgCNGl9jaTT2LyKuiQ
+
+### Make a tweet
+POST http://localhost:5000/user/tweets/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im5hbmlwaW5uaW50aTIyIiwiaWF0IjoxNzMzNzY4Mjg1LCJleHAiOjE3MzM3NzE4ODV9.F15FdtKsWKDfvMvDQ7ElbKKYx1OXo9h5HrXzMtPUSrw
+
+{
+  "tweet": "5th tweet"
+}
