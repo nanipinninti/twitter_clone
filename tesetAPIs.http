@@ -18,26 +18,47 @@ Content-Type: application/json
   "password": "richard_567"
 }
 
+### Loading feed for Ayush accunt
+GET http://localhost:5000/user/tweets/feed/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImF5dXNoIiwiaWF0IjoxNzMzODExODgzLCJleHAiOjE3MzQ0MTY2ODN9.D2ArItLlz2ORQYYDoqSghDiSmxfEI10CYPiOJPm5cGU
+
+
 ### Following List of Nani
 GET http://localhost:5000/user/following/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im5hbmlwaW5uaW50aTIyIiwiaWF0IjoxNzMzNzY4Mjg1LCJleHAiOjE3MzM3NzE4ODV9.F15FdtKsWKDfvMvDQ7ElbKKYx1OXo9h5HrXzMtPUSrw
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im5hbmlwaW5uaW50aTIyIiwiaWF0IjoxNzMzODA3MzA3LCJleHAiOjE3MzQ0MTIxMDd9.KVhXsuCR9eI27S35CgTK4RkKPZwP-qu2yiy4pntShG4
 
 ### Followers List of Nani
 GET http://localhost:5000/user/followers/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im5hbmlwaW5uaW50aTIyIiwiaWF0IjoxNzMzNzY4Mjg1LCJleHAiOjE3MzM3NzE4ODV9.F15FdtKsWKDfvMvDQ7ElbKKYx1OXo9h5HrXzMtPUSrw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im5hbmlwaW5uaW50aTIyIiwiaWF0IjoxNzMzODA3MzA3LCJleHAiOjE3MzQ0MTIxMDd9.KVhXsuCR9eI27S35CgTK4RkKPZwP-qu2yiy4pntShG4
+
+### Open an tweet from ayush account
+GET http://localhost:5000/tweets/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImF5dXNoIiwiaWF0IjoxNzMzODExODgzLCJleHAiOjE3MzQ0MTY2ODN9.D2ArItLlz2ORQYYDoqSghDiSmxfEI10CYPiOJPm5cGU
 
 
+### Check likes of an tweet from ayush account
+GET http://localhost:5000/tweets/1/likes/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImF5dXNoIiwiaWF0IjoxNzMzODExODgzLCJleHAiOjE3MzQ0MTY2ODN9.D2ArItLlz2ORQYYDoqSghDiSmxfEI10CYPiOJPm5cGU
 
-### Follow 
-POST http://localhost:5000/follow/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImF5dXNoIiwiaWF0IjoxNzMzNzY2NTY3LCJleHAiOjE3MzM3NzAxNjd9.Zm3YdAU8CPXB0h_U_e9NVAsv3YgCNGl9jaTT2LyKuiQ
 
-### Make a tweet
+### Check replies of an tweet from ayush account
+GET http://localhost:5000/tweets/1/replies/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImF5dXNoIiwiaWF0IjoxNzMzODExODgzLCJleHAiOjE3MzQ0MTY2ODN9.D2ArItLlz2ORQYYDoqSghDiSmxfEI10CYPiOJPm5cGU
+
+
+### All tweets from Nani account
+GET http://localhost:5000/user/tweets/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im5hbmlwaW5uaW50aTIyIiwiaWF0IjoxNzMzODA3MzA3LCJleHAiOjE3MzQ0MTIxMDd9.KVhXsuCR9eI27S35CgTK4RkKPZwP-qu2yiy4pntShG4
+
+### Make a tweet from Venky account
 POST http://localhost:5000/user/tweets/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im5hbmlwaW5uaW50aTIyIiwiaWF0IjoxNzMzNzY4Mjg1LCJleHAiOjE3MzM3NzE4ODV9.F15FdtKsWKDfvMvDQ7ElbKKYx1OXo9h5HrXzMtPUSrw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6InZlbmt5IiwiaWF0IjoxNzMzODExOTI2LCJleHAiOjE3MzQ0MTY3MjZ9.7BcXP0U1vt4YZUwzPII5ctE2K1E_EK8eHidVFeJUI5s
 
 {
-  "tweet": "5th tweet"
+  "tweet": "This is first tweet from venky"
 }
+
+### delete an tweet
+DELETE http://localhost:5000/tweets/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im5hbmlwaW5uaW50aTIyIiwiaWF0IjoxNzMzODA3MzA3LCJleHAiOjE3MzQ0MTIxMDd9.KVhXsuCR9eI27S35CgTK4RkKPZwP-qu2yiy4pntShG4
